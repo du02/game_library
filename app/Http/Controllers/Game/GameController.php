@@ -61,10 +61,9 @@ class GameController extends Controller
      */
     public function show($id)
     {
-        // retornar uma view com detalhes
         $game = Game::FindOrFail($id);
 
-        return json_encode($game);
+        return view('game.show', compact('game'));
     }
 
     /**
