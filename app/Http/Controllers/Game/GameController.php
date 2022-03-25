@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Game;
 
 use App\Http\Controllers\Controller;
 use App\Models\Game;
+use App\Models\User;
 use Dompdf\Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GameController extends Controller
 {
@@ -16,7 +18,7 @@ class GameController extends Controller
      */
     public function index()
     {
-        $games = Game::where('user_id', 1)->paginate(4);
+        $games = User::find(Auth::id())->games()->paginate(4);
 
         return view('game.library', compact('games'));
     }
