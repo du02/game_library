@@ -56,7 +56,7 @@
                     <div class="d-flex justify-content-between flex-wrap">
                         @foreach($games as $game)
                             <div class="card shadow-sm border mb-3" style="width: 15rem;">
-                                <img style="height: 20rem;" src="https://store-images.s-microsoft.com/image/apps.8896.13817077164703749.cd543429-7cae-4721-ab65-6ad0bd406b04.fe30a3c6-8907-42ea-88fa-5650c8a7abe6?q=90&w=177&h=265" class="card-img-top" alt="...">
+                                <img style="height: 20rem;" src="{{ $game->url_img }}" class="card-img-top" alt="Capa">
                                 <div class="card-body">
                                     <h5 class="card-title text-center fw-bold">{{ Str::limit($game->name, 15) }}</h5>
                                     <p class="font-monospace text-center">{{ Str::limit($game->company, 15) }}</p>

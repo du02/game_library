@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('company');
             $table->text('description');
+            $table->text('url_img');
             $table->timestamps();
 
             // constraints | restrições

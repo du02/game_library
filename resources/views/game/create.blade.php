@@ -43,11 +43,22 @@
                                 <div class="form-floating">
                                     <textarea
                                         name="description"
-                                        class="form-control"
+                                        class="form-control mb-3"
                                         id="floatingTextarea2" style="height: 100px">
                                         {{ old('description') }}
                                     </textarea>
                                     <label for="floatingTextarea2">Descrição</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <input
+                                        name="url_img"
+                                        type="text"
+                                        class="form-control"
+                                        id="floatingEmpresa"
+                                        placeholder="Empresa"
+                                        value="{{ old('company') }}">
+                                    <label for="floatingPassword">URL da imagem</label>
                                 </div>
                             </div>
 
