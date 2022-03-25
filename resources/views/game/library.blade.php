@@ -31,7 +31,7 @@
 
                 <!-- Seach -->
                 <div class="col-md-3">
-                    <form action="#" method="" class="shadow-sm">
+                    <form class="shadow-sm" id="form-seach">
                         @csrf
                         <div class="input-group mb-3">
                             <input
@@ -39,13 +39,16 @@
                                 class="form-control"
                                 placeholder="Pesquisar Game"
                                 aria-label="Recipient's username"
-                                aria-describedby="basic-addon2">
-                            <button type="submit" class="input-group-text" id="basic-addon2">
+                                aria-describedby="basic-addon2"
+                                id="input-seach"
+                            >
+                            <button type="submit" class="input-group-text">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
                     </form>
                 </div>
+
             </div>
 
             <div class="mt-4 p-1">
@@ -84,3 +87,15 @@
             </div>
         </div>
 @endsection
+
+@push('script')
+     <script>
+        $.ajax({
+            url: '',
+            method: '',
+            data: {
+
+            }
+        })
+     </script>
+@endpush
