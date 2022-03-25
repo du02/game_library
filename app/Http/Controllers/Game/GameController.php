@@ -18,7 +18,7 @@ class GameController extends Controller
     {
         $games = Game::where('user_id', 1)->paginate(4);
 
-        return view('game.index', compact('games'));
+        return view('game.library', compact('games'));
     }
 
     /**
