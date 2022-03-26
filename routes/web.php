@@ -21,5 +21,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('games/{id}/edit', [GameController::class, 'edit'])->name('games.edit');
     Route::post('games/{id}', [GameController::class, 'update'])->name('games.update');
     Route::get('games/{id}/remove', [GameController::class, 'destroy'])->name('games.destroy');
+
+    Route::get('search', [GameController::class, 'search'])->name('games.search');
 });
 

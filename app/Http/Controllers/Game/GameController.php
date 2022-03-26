@@ -111,4 +111,12 @@ class GameController extends Controller
             return redirect()->route('games.index')->with('error', $err->getMessage());
         }
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->search;
+        $game = Game::where('name', 'like', "%{$search}%")->get();
+
+        return response()->json($game);
+    }
 }
